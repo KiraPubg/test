@@ -1,0 +1,177 @@
+body.locked {
+	overflow: hidden;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+button {
+	border: none;
+	cursor: pointer;
+}
+
+.test__wrapper {
+	max-width: 1230px;
+	margin: 0 auto;
+	padding: 0 15px;
+	background: #C0DBD9;
+}
+
+.test-line {
+	background: #7FAFF7;
+	height: 100px;
+}
+
+.test-one {
+	margin-top: 15px;
+	background: #B3F95A;
+	height: 411px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+}
+
+.block-one {
+	background: #8AD191;
+	position: relative;
+}
+
+.block-one::after {
+	position: absolute;
+	font-size: 53px;
+	line-height: 62px;
+	color: #FFFFFF;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.block-one:nth-child(1)::after {
+	content: "1";
+}
+
+.block-one:nth-child(2)::after {
+	content: "2";
+}
+
+.block-one:nth-child(3)::after {
+	content: "3";
+}
+
+.block-one:nth-child(4)::after {
+	content: "4";
+}
+
+.block-one:nth-child(5)::after {
+	content: "5";
+}
+
+.block-one:nth-child(6)::after {
+	content: "6";
+}
+
+.col-3 {
+	width: 33.33333%;
+}
+
+.col-6 {
+	width: 50.427%;
+}
+
+.col-big {
+	width: calc(86.325% - 15px);
+}
+
+.col-sm {
+	width: 13.675%;
+}
+
+.test-two {
+	padding: 30px;
+	display: flex;
+	grid-template: 30px;
+	background: #88B5BF;
+	margin: 15px 0 100px;
+	gap: 30px;
+}
+
+.mask {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
+	display: none;
+	z-index: 10;
+}
+
+.mask.active {
+	display: block;
+}
+
+.block-2 {
+	background: #0D89B0;
+	height: 199px;
+	width: 100%;
+}
+
+.popup {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%) scale(0);
+	max-width: 400px;
+	width: 100%;
+	height: 400px;
+	background: #fff;
+	z-index: 11;
+	padding: 15px;
+	transition: all .3s ease-in-out;
+}
+
+.popup.active {
+	transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+.close {
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: #7FAFF6;
+	border-radius: 5px;
+	color: #fff;
+	padding: 8px 15px;
+}
+
+.popup__content {
+	position: relative;
+	height: 100%;
+	font-size: 53px;
+	line-height: 62px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.popup__open {
+	background: #A5C7F9;
+	border-radius: 5px;
+	font-size: 20px;
+	line-height: 23px;
+	color: #FFFFFF;
+	padding: 8px 15px;
+	margin-left: 30px;
+	margin-top: 30px;
+	transition: all .3s ease-in-out;
+}
+
+.popup__open:hover {
+	background: #8aa6cf;
+}
+
+button:active {
+	transform: scale(.8);
+	opacity: .8;
+}
